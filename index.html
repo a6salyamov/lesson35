@@ -5,115 +5,988 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
 </head>
 
 <body>
   <div class="wrapper">
-      <div class="rateYo"></div>
-    </div>
     <header class="header">
       <div class="header__top">
         <div class="container">
           <div class="header__top-inner">
-            <a class="header__logo logo" href="#">
-              <img src="images/logo.svg" alt="logo">
+            <a class="logo" href="#">
+              <img class="logo__img" src="images/title-icon.svg" alt="">
             </a>
-            <nav class="header__nav">
-              <ul class="header__nav-list">
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#">About us</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#">Services</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#">Blog</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#">Contact</a>
-                </li>
+            <nav class="nav">
+              <ul class="nav__menu">
+                <li class="nav__menu-item"><a class="nav__menu-link" href="#">Кто мы?</a></li>
+                <li class="nav__menu-item"><a class="nav__menu-link" href="#">Услуги</a></li>
+                <li class="nav__menu-item"><a class="nav__menu-link" href="#">Акселератор</a></li>
+                <li class="nav__menu-item"><a class="nav__menu-link" href="#">Новости</a></li>
               </ul>
             </nav>
-            <div class="header__contact">
-              <a class="header__contact-img" href="tel:18002652452">
-                <img src="images/header-contact.svg" alt="Contact">
-              </a>
-              <div class="header__contact-button">
-                <span class="header__contact-text">Road Assistance</span>
-                <a class="header__contact-btn" href="tel:18002652452">1800 265 24 52</a>
-              </div>
-            </div>
+            <a class="header__top-btn button-green" href="#">Войти</a>
           </div>
         </div>
       </div>
       <div class="header__body">
         <div class="container">
           <div class="header__body-inner">
-            <div class="header__content">
-              <h1 class="header__title">Get your vehicle service done online at one place</h1>
-              <div class="header__body-button">
-                <a class="header__body-btn button" href="#"> Book a service</a>
-                <a class="header__body-play" href="https://www.youtube.com/watch?v=MDEyAoPvzco&t=3270s" data-fancybox>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_b_703_93)">
-                      <path
-                        d="M0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12Z"
-                        fill="#1E1B1B" />
-                    </g>
-                    <path
-                      d="M8.99268 13.7144V10.18C8.99268 8.67335 8.99268 7.92001 9.48339 7.62962C9.97411 7.33922 10.6345 7.70177 11.9552 8.42688L14.9846 10.0901C16.3231 10.8249 16.9924 11.1924 17.0071 11.7668C17.0218 12.3412 16.3722 12.7424 15.0731 13.5448L12.0437 15.416C10.6936 16.2499 10.0185 16.6668 9.50559 16.3807C8.99268 16.0947 8.99268 15.3012 8.99268 13.7144Z"
-                      fill="white" />
-                    <defs>
-                      <filter id="filter0_b_703_93" x="-80" y="-80" width="184" height="184"
-                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feGaussianBlur in="BackgroundImageFix" stdDeviation="40" />
-                        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_703_93" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_703_93" result="shape" />
-                      </filter>
-                    </defs>
-                  </svg>
-                  Play Video
-                </a>
-              </div>
-              <div class="header__body-text">
-                <img class="header__body-img" src="images/text-icon.svg" alt="">
-                <div class="header__body-text-item">
-                  <p>We are open</p>
-                  <p>Monday to Friday 9:00 AM to 10:00 AM</p>
-                </div>
-              </div>
-            </div>
-            <a class="service" href="#">
-              <div class="service__number">
-                <span class="service__number-1">24 </span>
-                <span class="service__number-2">hr</span>
-              </div>
-              <span class="service__text">Quick service</span>
-            </a>
-            <div class="header__slider">
-              <img class="header__img" src="images/header-slider.jpg" alt="">
-            </div>
+            <h1 class="header__title">Запустите
+              <span>технологический IT-бизнес</span>
+              на международных рынках
+            </h1>
+            <p class="header__text">
+              Открыт набор заявок на акселератор
+            </p>
+            <a class="header__body-btn button-blue" href="#">Подать заявку</a>
           </div>
         </div>
       </div>
+      <div class="none"></div>
     </header>
+    <main class="main">
+      <section class="service">
+        <div class="container">
+          <div class="service__inner">
+            <h3 class="main__title">Наши услуги</h3>
+            <div class="service__top">
+              <div class="service__top-content">
+                <h5 class="service__title">Аналитические исследования</h5>
+                <p class="service__text">
+                  Одним из наших ключевых направлений является анализ технологических трендов на
+                  международных рынках.
+                  Мы проводим анализ на основе публичных исследований McKinsey, BCG, PWC, Deloitte, Accenture, BCG, EY,
+                  Crunchbase,
+                  Dealroom, F6S, PitchBook а также агрегируем и анализируем данные из открытых международных источников
+                  патенты, медиа,
+                  научные публикации
+                </p>
+                <a class="service__btn button-green" href="#">Узнать подробнее</a>
+              </div>
+              <div class="service__top-slide">
+                <img class="service__top-img" src="images/service-top.jpg.webp" alt="serche">
+              </div>
+            </div>
+            <div class="service__bottom">
+              <div class="service__bottom-slide">
+                <img class="service__bottom-img" src="images/service-bottom.jpg.webp" alt="rocket">
+              </div>
+              <div class="service__bottom-content">
+                <h5 class="service__title">Онлайн акселератор для IT бизнеса</h5>
+                <p class="service__text">
+                  Онлайн программа аскелерации IT бизнеса позволит вашей команде открыть новые горизонты и возможности
+                  для бизнеса на
+                  глобальных рынках. В результате программы вы получите возможность презентовать свой проект для
+                  международных инвесторов
+                  и локальных партнеров
+                </p>
+                <a class="service__btn button-green" href="#">Узнать подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ho-we">
+        <div class="container">
+          <h3 class="main__title">Для кого мы?</h3>
+          <div class="ho-we__item">
+            <div class="ho-we__content">
+              <span>01</span>
+              <p>IT проекты на стадии идеи</p>
+              Для стартапов, которые планируют привлечь международные инвестиции, протестировать спрос и запустить
+              продукт
+            </div>
+            <div class="ho-we__content">
+              <span>02</span>
+              <p>Инновационный бизнес</p>
+              Для уже работающего технологического бизнес, позволим найти новые международне рынки сбыта, масштабировать
+              бизнес
+            </div>
+            <div class="ho-we__content">
+              <span>03</span>
+              <p>Корпорации</p>
+              Для уже работающего технологического бизнес, позволим найти новые международне рынки сбыта, масштабировать
+              бизнес
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="business">
+        <h2 class="business__title">
+          Научитесь исследовать иностранные рынки
+          и откройте новые возможности для своего бизнеса
+        </h2>
+        <p class="business__text">
+          Наша команда поможет вам изучить рынки Ближнего Востока, Азии, Латинской Америки и Африки
+        </p>
+        <a class="business__btn button-blue" href="#">
+          Получить консультацию</a>
+      </section>
+      <section class="country">
+        <div class="container">
+          <div class="country__inner">
+            <h3 class="main__title">С какими рынками мы работаем?</h3>
+            <div class="country__item">
+              <nav class="country__menu">
+                <ul class="country__list">
+                  <li class="country__list-item">Ближний восток</li>
+                  <li class="country__list-item">Азия</li>
+                  <li class="country__list-item">Латинская Америка</li>
+                  <li class="country__list-item">Африка</li>
+                </ul>
+              </nav>
+              <div class="country__content">
+                <div class="country__content-left">
+                  <h5 class="country__content-title">Чем интересен
+                    <span>Рынок MENA:</span>
+                  </h5>
+                  <p class="country__content-text">ОАЭ, Саудовская Аравия,
+                    Израиль, Оман, Бахрейн, Катар,
+                    Тунис, Йемен, Египет, Алжир</p>
+                  <a class="button-blue" href="#">Выйти на рынок</a>
+                  <div class="country__content-user-box">
+                    <div class="country__content-user-img">
+                      <img src="images/country-user.jpg" alt="">
+                    </div>
+                    <div class="country__content-user-text">
+                      <span>Фатима</span>
+                      Менеджер по MENA
+                    </div>
+                  </div>
+                </div>
+                <div class="country__content-right">
+                  <div class="country__content-box">
+                    <p>>5,5
+                      <span>Млрд</span>
+                    </p>
+                    Инвестиции pre-seed, seed
+                  </div>
+                  <div class="country__content-box">
+                    <p>>300</p>
+                    Акселераторов, инкубаторов
+                  </div>
+                  <div class="country__content-box">
+                    <p>73</p>
+                    Венчурных фонда
+                  </div>
+                  <a class="country__content-box country__content-box--last" href="#">
+                    <img src="images/country-arrow.svg" alt="">
+                    Скачать отчет
+                    по рынку MENA
+                  </a>
+                </div>
+              </div>
+              <div class="country__content">
+                <div class="country__content-left">
+                  <h5 class="country__content-title">Другой текст
+                    <span>Рынок MENA:</span>
+                  </h5>
+                  <p class="country__content-text">ОАЭ, Саудовская Аравия,
+                    Израиль, Оман, Бахрейн, Катар,
+                    Тунис, Йемен, Египет, Алжир</p>
+                  <a class="button-blue" href="#">Выйти на рынок</a>
+                  <div class="country__content-user-box">
+                    <div class="country__content-user-img">
+                      <img src="images/country-user.jpg.webp" alt="">
+                    </div>
+                    <div class="country__content-user-text">
+                      <span>Фатима</span>
+                      Менеджер по MENA
+                    </div>
+                  </div>
+                </div>
+                <div class="country__content-right">
+                  <div class="country__content-box">
+                    <p>>5,5
+                      <span>Млрд</span>
+                    </p>
+                    Инвестиции pre-seed, seed
+                  </div>
+                  <div class="country__content-box">
+                    <p>>300</p>
+                    Акселераторов, инкубаторов
+                  </div>
+                  <div class="country__content-box">
+                    <p>73</p>
+                    Венчурных фонда
+                  </div>
+                  <a class="country__content-box country__content-box--last" href="#">
+                    <img src="images/country-arrow.svg" alt="">
+                    Скачать отчет
+                    по рынку MENA
+                  </a>
+                </div>
+              </div>
+              <div class="country__content">
+                <div class="country__content-left">
+                  <h5 class="country__content-title">Совершенно другой текст
+                    <span>Рынок MENA:</span>
+                  </h5>
+                  <p class="country__content-text">ОАЭ, Саудовская Аравия,
+                    Израиль, Оман, Бахрейн, Катар,
+                    Тунис, Йемен, Египет, Алжир</p>
+                  <a class="button-blue" href="#">Выйти на рынок</a>
+                  <div class="country__content-user-box">
+                    <div class="country__content-user-img">
+                      <img src="images/country-user.jpg.webp" alt="">
+                    </div>
+                    <div class="country__content-user-text">
+                      <span>Фатима</span>
+                      Менеджер по MENA
+                    </div>
+                  </div>
+                </div>
+                <div class="country__content-right">
+                  <div class="country__content-box">
+                    <p>>5,5
+                      <span>Млрд</span>
+                    </p>
+                    Инвестиции pre-seed, seed
+                  </div>
+                  <div class="country__content-box">
+                    <p>>300</p>
+                    Акселераторов, инкубаторов
+                  </div>
+                  <div class="country__content-box">
+                    <p>73</p>
+                    Венчурных фонда
+                  </div>
+                  <a class="country__content-box country__content-box--last" href="#">
+                    <img src="images/country-arrow.svg" alt="">
+                    Скачать отчет
+                    по рынку MENA
+                  </a>
+                </div>
+              </div>
+              <div class="country__content">
+                <div class="country__content-left">
+                  <h5 class="country__content-title">Вообще отличный текст
+                    <span>Рынок MENA:</span>
+                  </h5>
+                  <p class="country__content-text">ОАЭ, Саудовская Аравия,
+                    Израиль, Оман, Бахрейн, Катар,
+                    Тунис, Йемен, Египет, Алжир</p>
+                  <a class="button-blue" href="#">Выйти на рынок</a>
+                  <div class="country__content-user-box">
+                    <div class="country__content-user-img">
+                      <img src="images/country-user.jpg.webp" alt="">
+                    </div>
+                    <div class="country__content-user-text">
+                      <span>Фатима</span>
+                      Менеджер по MENA
+                    </div>
+                  </div>
+                </div>
+                <div class="country__content-right">
+                  <div class="country__content-box">
+                    <p>>5,5
+                      <span>Млрд</span>
+                    </p>
+                    Инвестиции pre-seed, seed
+                  </div>
+                  <div class="country__content-box">
+                    <p>>300</p>
+                    Акселераторов, инкубаторов
+                  </div>
+                  <div class="country__content-box">
+                    <p>73</p>
+                    Венчурных фонда
+                  </div>
+                  <a class="country__content-box country__content-box--last" href="#">
+                    <img src="images/country-arrow.svg" alt="">
+                    Скачать отчет
+                    по рынку MENA
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="accelerator-it">
+        <div class="container">
+          <div class="accelerator-it__inner">
+            <h3 class="main__title">Об акселераторе IT бизнеса</h3>
+            <p class="accelerator-it__text">
+              Программа акселератора расчитана на 8 недель интенсивного онлайн курса с вебинарами приглашенных экспертов
+              по
+              международным рынкам, разборами ваших идей и проектов
+            </p>
+            <div class="accelerator-it__item">
+              <div class="accelerator-it__item-box">
+                <img class="accelerator-it__item-img" src="images/accelerator-1.svg" alt="">
+                Месяца обучения
+              </div>
+              <div class="accelerator-it__item-box">
+                <img class="accelerator-it__item-img" src="images/accelerator-2.svg" alt="">
+                Приглашенные эксперты
+              </div>
+              <div class="accelerator-it__item-box">
+                <img class="accelerator-it__item-img" src="images/accelerator-3.svg" alt="">
+                Персональный менеджер
+              </div>
+            </div>
+            <div class="accelerator-it__video">
+              <div class="accelerator-it__video-text">
+                Об акселерационной программе
+              </div>
+              <a class="accelerator-it__video-icon" href="https://www.youtube.com/watch?v=EECrhWUPjWg" data-fancybox>
+                <div class="accelerator-it__video-img">
+                  <img src="images/accelerator-it-icon.svg" alt="">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="programm">
+        <div class="container">
+          <div class="programm__inner">
+            <h3 class="main__title">Программа акселератора</h3>
+            <div class="programm__accordion">
+              <div class="programm__accordion-item">
+                <div class="programm__accordion-title">
+                  <p><span>Модуль 1</span>
+                    Тенденции и тренды современного мира
+                  </p>
+                  <div class="programm__accordion-ellipse">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="programm__accordion-text">
+                  <p>Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний</p>
+                  <p>Тема 2. Рынки Ближнего Востока, Азии, Латинской АмерикиТема</p>
+                  <p>3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?</p>
+                  <p><a href="#">9 видео роликов, вебинар с приглашенным экспертом</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="programm__accordion">
+              <div class="programm__accordion-item">
+                <div class="programm__accordion-title">
+                  <p><span>Модуль 2</span>
+                    Стартап подход к созданию международного IT продукта
+                  </p>
+                  <div class="programm__accordion-ellipse">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="programm__accordion-text">
+                  <p>Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний</p>
+                  <p>Тема 2. Рынки Ближнего Востока, Азии, Латинской АмерикиТема</p>
+                  <p>3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?</p>
+                  <p><a href="#">9 видео роликов, вебинар с приглашенным экспертом</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="programm__accordion">
+              <div class="programm__accordion-item">
+                <div class="programm__accordion-title">
+                  <p><span>Модуль 3</span>
+                    Бизнес моделирование и поиск Product Market Fit
+                  </p>
+                  <div class="programm__accordion-ellipse">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="programm__accordion-text">
+                  <p>Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний</p>
+                  <p>Тема 2. Рынки Ближнего Востока, Азии, Латинской АмерикиТема</p>
+                  <p>3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?</p>
+                  <p><a href="#">9 видео роликов, вебинар с приглашенным экспертом</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="programm__accordion">
+              <div class="programm__accordion-item">
+                <div class="programm__accordion-title">
+                  <p><span>Модуль 4</span>
+                    Определение рынка, поиск и исследование Целевой аудитории
+                  </p>
+                  <div class="programm__accordion-ellipse">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="programm__accordion-text">
+                  <p>Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний</p>
+                  <p>Тема 2. Рынки Ближнего Востока, Азии, Латинской АмерикиТема</p>
+                  <p>3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?</p>
+                  <p><a href="#">9 видео роликов, вебинар с приглашенным экспертом</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="programm__accordion">
+              <div class="programm__accordion-item">
+                <div class="programm__accordion-title">
+                  <p><span>Модуль 5</span>
+                    Что такое MVP и почему это важно
+                  </p>
+                  <div class="programm__accordion-ellipse">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="programm__accordion-text">
+                  <p>Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний</p>
+                  <p>Тема 2. Рынки Ближнего Востока, Азии, Латинской АмерикиТема</p>
+                  <p>3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?</p>
+                  <p><a href="#">9 видео роликов, вебинар с приглашенным экспертом</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="programm__accordion">
+              <div class="programm__accordion-item">
+                <div class="programm__accordion-title">
+                  <p><span>Модуль 6</span>
+                    Unit экономика и финансовое моделирование
+                  </p>
+                  <div class="programm__accordion-ellipse">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="programm__accordion-text">
+                  <p>Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний</p>
+                  <p>Тема 2. Рынки Ближнего Востока, Азии, Латинской АмерикиТема</p>
+                  <p>3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?</p>
+                  <p><a href="#">9 видео роликов, вебинар с приглашенным экспертом</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="programm__accordion">
+              <div class="programm__accordion-item">
+                <div class="programm__accordion-title">
+                  <p><span>Модуль 7</span>
+                    Что такое дорожная карта продукта?
+                  </p>
+                  <div class="programm__accordion-ellipse">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="programm__accordion-text">
+                  <p>Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний</p>
+                  <p>Тема 2. Рынки Ближнего Востока, Азии, Латинской АмерикиТема</p>
+                  <p>3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?</p>
+                  <p><a href="#">9 видео роликов, вебинар с приглашенным экспертом</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="programm__accordion">
+              <div class="programm__accordion-item">
+                <div class="programm__accordion-title">
+                  <p><span>Модуль 8</span>
+                    Открытие юридического лица. Возможности для стартапов
+                  </p>
+                  <div class="programm__accordion-ellipse">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="programm__accordion-text">
+                  <p>Тема 1. Куда движутся IT тренды? Аналитика Gartner, разбор отчетов консалтинговых компаний</p>
+                  <p>Тема 2. Рынки Ближнего Востока, Азии, Латинской АмерикиТема</p>
+                  <p>3. Что такое внутренние и внешние инновации? Как искать инновационные идеи?</p>
+                  <p><a href="#">9 видео роликов, вебинар с приглашенным экспертом</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="programm__accordion">
+              <div class="programm__accordion-item">
+                <div class="programm__accordion-title">
+                  <p><span>Демо день</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="button-blue" href="#">Получить полную программу</a>
+          </div>
+      </section>
+      <section class="blue-icons">
+        <div class="container">
+          <div class="blue-icons__inner">
+            <div class="blue-icons__content">
+              <h3 class="blue-icons__title">Попадите на радары инвесторов и партнеров</h3>
+              <div class="blue-icons__text">В результате прохождения обучения мы создадим профили вашей компании на всех
+                международных скаутинговых площадках</div>
+              <a class="button-green" href="#">Записаться в акселератор</a>
+            </div>
+            <div class="blue-icons__item">
+              <div class="blue-icons__brands">
+                <img src="images/blue-icon-1.jpg" alt="">
+              </div>
+              <div class="blue-icons__brands">
+                <img src="images/blue-icon-2.jpg" alt="">
+              </div>
+              <div class="blue-icons__brands">
+                <img src="images/blue-icon-3.jpg" alt="">
+              </div>
+              <div class="blue-icons__brands">
+                <img src="images/blue-icon-4.jpg" alt="">
+              </div>
+              <div class="blue-icons__brands">
+                <img src="images/blue-icon-5.jpg" alt="">
+              </div>
+              <div class="blue-icons__brands">
+                <img src="images/blue-icon-6.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="result">
+        <div class="container">
+          <div class="result__inner">
+            <h3 class="main__title">Что вы получите в результате?</h3>
+            <div class="result__item">
+              <div class="result__content">
+                <span>01</span>
+                <p>Документы по продукту</p>
+                Бизнес план, отчет по анализу рынка, маркетинговый план, unit экономика, список гипотез, проект MVP
+              </div>
+              <div class="result__content">
+                <span>02</span>
+                <p>Обратная связь от рынка</p>
+                Проведение исследования целевой аудитории позволит сформировать Product market fit
+              </div>
+              <div class="result__content">
+                <span>03</span>
+                <p>Продвижение продукта</p>
+                Продвижение продукта через аналитические системы партнеров
+              </div>
+              <div class="result__content">
+                <span>04</span>
+                <p>Подписка на отчеты</p>
+                Подписка на аналитические отчеты по международным рынкам высокотехнологичных сфер
+              </div>
+              <div class="result__content">
+                <span>05</span>
+                <p>Подписка на отчеты</p>
+                Подписка на аналитические отчеты по международным рынкам высокотехнологичных сфер
+              </div>
+              <div class="result__content">
+                <span>06</span>
+                <p>Подписка на отчеты</p>
+                Подписка на аналитические отчеты по международным рынкам высокотехнологичных сфер
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="price">
+        <div class="container">
+          <div class="price__inner">
+            <h3 class="main__title">Стоимость</h3>
+            <div class="price__item">
+              <div class="price__content">
+                <div class="price__icon">
+                  <img src="images/price-1.svg" alt="">
+                  <p>
+                    Анализ международных
+                    рынков
+                    </>
+                </div>
+                <div class="price__list">
+                  <p>Что входит в отчет?</p>
+                  <ol>
+                    <li>Анализ конкурентов </li>
+                    <li>Анализ инвесторов</li>
+                    <li>Размеры рынка (TAM,SAM,SOM)</li>
+                    <li>Анализ СМИ</li>
+                    <li>Анализ запрос в сети интернет</li>
+                    </щ>
+                </div>
+                <div class="price__text">
+                  <div class="price__text-item"><span>Готовность</span>
+                    <p>7 раб. дней</p>
+                  </div>
+                  <div class="price__text-item"><span>Язык</span>
+                    <p>рус./англ.</p>
+                  </div>
+                  <div class="price__text-item"><span>Стоимость</span>
+                    <p class="price__text-blue">$1 000</p>
+                  </div>
+                </div>
+                <a class="button-blue price__btn" href="#">Оставить заявку</a>
+              </div>
+              <div class="price__content">
+                <div class="price__icon">
+                  <img class="price__img" src="images/price-2.svg" alt="">
+                  <p>
+                    Упаковка стартапа
+                    под локальные рынки
+                  </p>
+                </div>
+                <div class="price__list">
+                  <p>Что входит в отчет?</p>
+                  <ol>
+                    <li>Анализ локальных рынков</li>
+                    <li>Бизнес план</li>
+                    <li>Питч презентация</li>
+                    <li>Финансовый план</li>
+                    <li>Расчет юнит экономики</li>
+                    <li>Проведение каст дева</li>
+                  </ol>
+                </div>
+                <div class="price__text">
+                  <div class="price__text-item"><span>Готовность</span>
+                    <p>7 раб. дней</p>
+                  </div>
+                  <div class="price__text-item"><span>Язык</span>
+                    <p>рус./англ.</p>
+                  </div>
+                  <div class="price__text-item"><span>Стоимость</span>
+                    <p class="price__text-blue">$1 000</p>
+                  </div>
+                </div>
+                <a class="button-blue price__btn" href="#">Оставить заявку</a>
+              </div>
+              <div class="price__content">
+                <div class="price__icon">
+                  <img src="images/price-3.svg" alt="">
+                  <p>
+                    Акселератор
+                    вашего бизнеса
+                  </p>
+                </div>
+                <div class="price__list">
+                  <p>Что входит в акселератор?</p>
+                  <ol>
+                    <li>Онлайн доступ к курсам</li>
+                    <li>Документы для бизнеса</li>
+                    <li>Питч презентация</li>
+                    <li>Демо день</li>
+                    <li>Провдижение по результатам</li>
+                  </ol>
+                </div>
+                <div class="price__text">
+                  <div class="price__text-item">
+                    <span>Готовность</span>
+                    <p>7 раб. дней</p>
+                  </div>
+                  <div class="price__text-item"><span>Язык</span>
+                    <p>рус./англ.</p>
+                  </div>
+                  <div class="price__text-item">
+                    <span>Стоимость</span>
+                    <p class="price__text-blue">$1 000</p>
+                  </div>
+                </div>
+                <a class="button-blue price__btn" href="#">Оставить заявку</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-us">
+        <div class="container">
+          <div class="about-us__inner">
+            <h3 class="main__title">Кто мы?</h3>
+            <div class="about-us__top">
+              <div class="about-us__top-img">
+                <img src="images/about-us-bg1.jpg.webp" alt="">
+              </div>
+              <div class="about-us__top-text">
+                <p>
+                  <span>INNOMA.VC</span> - Международное аналитическое агентство по запуску IT бизнеса на локальных
+                  рынках регионов Азии, Ближнего
+                  Востока, Латинской Америки, Африки.
+                </p>
+                Наша команда состоит из профессионалов своего дела и основной нашей целью является помощь IT компаниям
+                получить
+                необходимые знания и пакеты документов, чтобы успешно запустить свой продукт на международных рынках.
+              </div>
+            </div>
+            <div class="about-us__founder">
+              <div class="about-us__founder-img">
+                <img src="images/about-us-bg2.webp" alt="">
+              </div>
+              <div class="about-us__founder-text">
+                Всем привет! <br> Меня зовут Роман. Последние 6 лет я являюсь частью <br>
+                инновационной экосистемы СНГ, прошел путь от проектного
+                менеджера до руководителя продукта по автоматизированному скаутингу и скорингу стартапов. За 6 лет
+                работы я увидел
+                множество ошибок и отсутствие ориентации акселерационных программ под запросы стартапов. Все
+                акселераторы выполнялись
+                ради <br> акселераторв и выполнения КПЭ.
+                <div>
+                  <p>Роман Гайн</p>
+                  Основатель INNOMA.VC
+                </div>
+              </div>
+            </div>
+            <div class="about-us__slider">
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide1.webp" alt="">
+              </div>
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide2.webp" alt="">
+              </div>
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide3.webp" alt="">
+              </div>
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide4.webp" alt="">
+              </div>
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide5.webp" alt="">
+              </div>
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide1.webp" alt="">
+              </div>
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide2.webp" alt="">
+              </div>
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide3.webp" alt="">
+              </div>
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide4.webp" alt="">
+              </div>
+              <div class="about-us__slider-item">
+                <img src="images/about-us-slide5.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="experts">
+        <div class="container">
+          <div class="experts__inner">
+            <h3 class="main__title">Эксперты и трекеры программы</h3>
+            <div class="experts__slider">
+              <div class="experts__slider-item">
+                <img class="experts__slider-img" src="images/experts-slider-1.jpg.webp" alt="">
+                <div class="experts__slider-text">
+                  <p>Юрий Ким</p>
+                  Проведение исследования целевой аудитории позволит сформировать Product market fit
+                </div>
+              </div>
+              <div class="experts__slider-item">
+                <img class="experts__slider-img" src="images/experts-slider-2.jpg.webp" alt="">
+                <div class="experts__slider-text">
+                  <p>Эшли Абрамс</p>
+                  Проведение исследования целевой аудитории позволит сформировать Product market fit
+                </div>
+              </div>
+              <div class="experts__slider-item">
+                <img class="experts__slider-img" src="images/experts-slider-3.jpg.webp" alt="">
+                <div class="experts__slider-text">
+                  <p>Фатими Юсуф</p>
+                  Проведение исследования целевой аудитории позволит сформировать Product market fit
+                </div>
+              </div>
+              <div class="experts__slider-item">
+                <img class="experts__slider-img" src="images/experts-slider-4.jpg.webp" alt="">
+                <div class="experts__slider-text">
+                  <p>Майкл Донован</p>
+                  Проведение исследования целевой аудитории позволит сформировать Product market fit
+                </div>
+              </div>
+              <div class="experts__slider-item">
+                <img class="experts__slider-img" src="images/experts-slider-1.jpg.webp" alt="">
+                <div class="experts__slider-text">
+                  <p>Юрий Ким</p>
+                  Проведение исследования целевой аудитории позволит сформировать Product market fit
+                </div>
+              </div>
+              <div class="experts__slider-item">
+                <img class="experts__slider-img" src="images/experts-slider-2.jpg.webp" alt="">
+                <div class="experts__slider-text">
+                  <p>Эшли Абрамс</p>
+                  Проведение исследования целевой аудитории позволит сформировать Product market fit
+                </div>
+              </div>
+              <div class="experts__slider-item">
+                <img class="experts__slider-img" src="images/experts-slider-3.jpg.webp" alt="">
+                <div class="experts__slider-text">
+                  <p>Фатими Юсуф</p>
+                  Проведение исследования целевой аудитории позволит сформировать Product market fit
+                </div>
+              </div>
+              <div class="experts__slider-item">
+                <img class="experts__slider-img" src="images/experts-slider-4.jpg.webp" alt="">
+                <div class="experts__slider-text">
+                  <p>Майкл Донован</p>
+                  Проведение исследования целевой аудитории позволит сформировать Product market fit
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="container">
+          <div class="partners__inner">
+            <h3 class="main__title">Наши партнеры</h3>
+            <div class="partners__content">
+              <a class="partners__content-item" href="#">
+                <img src="images/partners-1.jpg" alt="">
+              </a>
+              <a class="partners__content-item" href="#">
+                <img src="images/partners-2.jpg" alt="">
+              </a>
+              <a class="partners__content-item" href="#">
+                <img src="images/partners-3.jpg" alt="">
+              </a>
+              <a class="partners__content-item" href="#">
+                <img src="images/partners-4.jpg" alt="">
+              </a>
+              <a class="partners__content-item" href="#">
+                <img src="images/partners-5.jpg" alt="">
+              </a>
+              <a class="partners__content-item" href="#">
+                <img src="images/partners-6.jpg" alt="">
+              </a>
+              <a class="partners__content-item" href="#">
+                <img src="images/partners-7.jpg" alt="">
+              </a>
+              <a class="partners__content-item" href="#">
+                <img src="images/partners-8.jpg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="becom-partner">
+        <div class="container">
+          <div class="becom-partner__inner">
+            <h3 class="becom-partner__title">Мы создаем международное сообщество экспертов и партнеров</h3>
+            <p class="becom-partner__text">Если вы или ваш бизнес может быть полезен IT командам при выходе на
+              международные рынки, приглашем вас стать нашим
+              партнером</p>
+            <a class="button-blue" href="#">Стать партнером</a>
+          </div>
+        </div>
+      </section>
+      <section class="events">
+        <div class="container">
+          <div class="events__inner">
+            <h3 class="main__title">Мероприятия и события</h3>
+            <div class="events__content">
+              <div class="events__content-item">
+                <img src="images/events-1.jpg" alt="">
+                <p class="events__content-text">
+                  <span>Новый отчет по MENA</span>
+                  Аналитический отчет по рынкам
+                  Ближнего Востока (инвесторы,
+                  объем раундов, ТОП сферы)
+                </p>
+                <p class="events__content-num">22.11.2022</p>
+              </div>
+              <div class="events__content-item">
+                <img src="images/events-2.jpg" alt="">
+                <p class="events__content-text">
+                  <span>Вебинар по особенностям
+                    рынков Ближнего Востока</span>
+                  Поговорим с экспертами рынков
+                  в формате дискуссии
+                </p>
+                <p class="events__content-num">22.11.2022</p>
+              </div>
+              <div class="events__content-item">
+                <img src="images/events-3.jpg" alt="">
+                <p class="events__content-text">
+                  <span>Вебинар по особенностям
+                    рынков Ближнего Востока</span>
+                  Поговорим с экспертами рынков
+                  в формате дискуссии
+                </p>
+                <p class="events__content-num">22.11.2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="container">
+          <div class="contact__inner">
+            <div class="contact__left">
+              <div class="contact__title">
+                <h3>Остались вопросы?</h3>
+                <p>
+                  Оставьте заявку и наша команда свяжется с вами
+                </p>
+              </div>
+              <div class="contact__social">
+                <p>Или напишите нам:</p>
+                <div class="contact__icons-box">
+                  <a class="contact__icons" href="#">
+                    <div class="contact__icons-img">
+                      <img src="images/contact-telegramm.svg" alt="">
+                    </div>
+                    <p>Telegram</p>
+                  </a>
+                  <a class="contact__icons" href="#">
+                    <div class="contact__icons-img">
+                      <img src="images/contact-whatsapp.svg" alt="">
+                    </div>
+                    <p>Whatsapp</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <form class="contact__form">
+              <input class="contact__input" type="text" placeholder="Имя">
+              <input class="contact__input" type="text" placeholder="Почта">
+              <div class="contact__input">
+                <span class="contact__input-arrow"></span>
+                <select name="tel-number" id="tel-number">
+                  <option value="1">(971)</option>
+                  <option value="2">(961)</option>
+                  <option value="3">(951)</option>
+                </select>
+                <img src="images/contact-country.svg" alt="">
+                <input type="tel">
+              </div>
+              <button class="contact__btn button-green" type="submit">Оставить заявку</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__icon">
+            <a href="#"><img src="images/title-icon.svg" alt=""></a>
+            <p>Все права защищены</p>
+          </div>
+          <nav class="nav">
+            <ul class="nav__menu">
+              <li class="nav__menu-item"><a class="nav__menu-link" href="#">Кто мы?</a></li>
+              <li class="nav__menu-item"><a class="nav__menu-link" href="#">Услуги</a></li>
+              <li class="nav__menu-item"><a class="nav__menu-link" href="#">Акселератор</a></li>
+              <li class="nav__menu-item"><a class="nav__menu-link" href="#">Новости</a></li>
+            </ul>
+          </nav>
+          <div class="footer__adress">
+            <p>Dubai, Single Business Tower 1503, Business Bay</p>
+            <a href="mailto:Sales@innoma.vc" >Sales@innoma.vc</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
 
 </html>
