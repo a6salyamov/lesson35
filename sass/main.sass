@@ -28,6 +28,22 @@ body
   padding: 0 15px
   height: 100%
 
+.overlay
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  position: fixed
+  background: rgba(0, 0, 0, 0.59)
+  z-index: 20
+  visibility: hidden
+  opacity: 0
+  transition: all .3s
+
+.overlay--show
+  opacity: 1
+  visibility: visible
+
 .button-green
   background-color: $greencolor
   padding: 18px 45px
@@ -52,9 +68,54 @@ body
     background: #016CA8
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
 
-//===================ГЛАВНОЕ-СВЕРХУ=============================
+.burger
+  display: none
+  height: 40px
+  width: 40px
+  background-color: #fff
+  border-radius: 5px
+  .line-1
+    display: block
+    width: 18px
+    height: 2px
+    background-color: #07AF91
+    border-radius: 10px
+    margin: 0 auto
+    margin-top: 13px
+    position: relative
+    &::after
+      content: ""
+      position: absolute
+      display: block
+      width: 12px
+      height: 2px
+      background-color: #07AF91
+      border-radius: 10px
+      top: 4px
+      left: 3px
+  .line-2
+    display: block
+    width: 18px
+    height: 2px
+    background-color: #07AF91
+    border-radius: 10px
+    margin: 0 auto
+    margin-top: 6px
+    position: relative
+    &::after
+      content: ""
+      position: absolute
+      display: block
+      width: 12px
+      height: 2px
+      background-color: #07AF91
+      border-radius: 10px
+      top: 4px
+      left: 3px
 
-//===================HEADER================================
+//===================ГЛАВНОЕ-СВЕРХУ======================
+
+//===================HEADER==============================
 
 .header__top-inner
   display: flex
@@ -74,10 +135,6 @@ body
 
 .nav__menu-link
   padding-bottom: 5px
-  border-bottom: 1px solid rgba(#FFFFFF,0)
-  transition: all .3s
-  &:hover
-    border-bottom: 1px solid #FFFFFF
 
 .header__body
   margin-bottom: 6%
@@ -89,7 +146,7 @@ body
     font-size: 43px
     line-height: 60px
     text-transform: uppercase
-    span
+    .title__span-1
       display: block
       width: 773px
       height: 59px
@@ -101,6 +158,8 @@ body
     font-weight: 400
     font-size: 34px
     line-height: 80px
+  .header__text--media
+    display: none
 
 //=====================SERVICE==============================
 
@@ -135,6 +194,9 @@ body
   font-size: 20px
   line-height: 30px
   margin-bottom: 20px
+
+.service__btn--2
+  display: none
 
 .service__bottom
   display: flex
@@ -965,7 +1027,6 @@ body
   font-size: 16px
   line-height: 375%
   color: #707070
-  position: relative
   input
     font-weight: 400
     font-size: 16px
@@ -978,44 +1039,76 @@ body
     color: #707070
     appearance: none
     margin-left: 20px
-  img
-    text-align: center
-    vertical-align: middle
 
-.contact__input-arrow
-  background-color: #1178B2
-  width: 0
-  height: 0
-  border-radius: 4px
-  position: absolute
-  display: block
-  z-index: 20
-  top: 30px
+.contact__input--num
+  display: flex
+  align-items: center
+
+//======================CHOICES=======================
+
+.choices
+  width: 110px
+  margin: 0
+
+.choices__inner
+  width: 110px
+  background-color: #fff
+  border: none
+  padding: 0 0 0 25px
+  font-weight: 400
+  font-size: 16px
+  height: 60px
+  vertical-align: middle
+
+.choices__list.choices__list--single
+  padding: 0
+
+.choices__item.choices__item--selectable
+  position: relative
+  & img
+    position: absolute
+    top: 22px
+    left: 50px
+
+.choices__list.choices__list--dropdown
+  width: 125px
+  height: 370px
+
+.choices__list--dropdown
+  .choices__item--selectable.is-highlighted::after
+    display: none
+
+div#choices--country-we-item-choice-1
+  background-color: #fff
+
+.choices[data-type*=select-one]::after
+  top: 25px
   left: 0
-  &::after
-    content: ''
-    background-color: #1178B2
-    width: 10px
-    height: 2px
-    border-radius: 10px
-    position: absolute
-    display: block
-    z-index: 20
-    transform: rotate(45deg)
-    left: 0
-    top: 0
-  &::before
-    content: ''
-    background-color: #1178B2
-    width: 10px
-    height: 2px
-    border-radius: 10px
-    position: absolute
-    display: block
-    z-index: 20
-    transform: rotate(-45deg)
-    left: 6.5px
-    top: 0
+  background-image: url('../images/dots.svg')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  height: 20px
+  width: 20px
+  border: none
+  transition: all .6s ease
+
+.choices[data-type*=select-one].is-open::after
+  top: 25px
+  transform: rotate(180deg)
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item img
+  position: relative
+  top: 21px
+  right: 0
+
+.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list
+  overflow: visible
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable
+  padding-right: 0
+
+//-----------------------------------------------------
 
 .contact__btn
   max-width: 246px
@@ -1056,13 +1149,87 @@ body
 
 //=====================MEDIA=============================
 
+//====================1200px=============================
+@media (max-width: 1200px)
+  .main__title
+    text-align: center
+    font-size: 32px
+
+  .service__top
+    flex-direction: column
+    align-items: center
+    margin-top: 20px
+    text-align: center
+    margin-bottom: 55px
+
+  .service__title
+    margin-bottom: 20px
+    font-size: 18px
+    line-height: 22px
+
+  .service__text
+    font-size: 16px
+
+  .service__btn--1
+    display: none
+
+  .service__btn--2
+    display: inline-block
+    max-width: 326px
+    margin: 0 auto
+    margin-top: 20px
+
+  .service__top-slide
+    margin-top: 20px
+    display: flex
+    flex-direction: column
+
+  .service__inner
+    margin: 100px 0 100px
+
+  .service__bottom
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+  .service__bottom-slide
+    margin-bottom: 20px
+
+  .ho-we__item
+    flex-wrap: wrap
+    justify-content: center
+    gap: 20px 20px
+
+  .ho-we__content
+    max-width: 354px
+
+  .ho-we__content--third
+    max-width: 728px
+
+  .business
+    height: 730px
+    padding: 100px 15px 100px
+
+  .business__title
+    font-size: 36px
+    display: inline
+    padding: 9px
+    border-radius: 0
+
+  .business__text
+    max-width: 490px
+    font-size: 16px
+    line-height: 30px
+    margin: 20px auto 20px
+
+//====================1000px==========================
 @media ( max-width: 1000px )
   .header__top-inner
     font-size: 16px
 
-  .nav__menu-item 
+  .nav__menu-item
     margin-right: 34px
-  
+
   .logo__img
     width: 124px
 
@@ -1071,10 +1238,192 @@ body
     border-radius: 5px
 
   .header__body-inner
+    margin: 0 auto
+    text-align: center
+    max-width: 644px
+    .header__title
+      font-size: 36px
+      .title__span-1
+        max-width: 603px
+        margin-left: 15px
+        transform: translateX(0)
+      .title__span-2
+        display: none
+    .header__text
+      display: none
+    .header__text--media
+      display: block
+      font-weight: 400
+      font-size: 18px
+      line-height: 194%
+      margin: 10px 0 10px 0
+      span
+        background: #FFFFFF
+        border-radius: 3px
+        color: #07AF91
+        font-weight: 700
+        padding: 5px
+
+  .button-blue
+    font-size: 18px
+
+//=====================730px=========================
+
+@media (max-width: 730px)
+  .burger
+    display: block
+    position: fixed
+    right: 20px
+    z-index: 50
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09)
+    transition: all .5s ease
+    transform: rotate(0deg)
+
+  .burger--close
+    .line-1
+      transform: rotate(45deg)
+      margin: 0
+      top: 19px
+      left: 11px
+      &::after
+        content: ""
+        display: none
+    .line-2
+      top: 17px
+      left: 11px
+      margin: 0
+      transform: rotate(-45deg)
+      &::after
+        content: ""
+        display: none
+
+  .nav
+    display: flex
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 40
+    background-color: #07AF91
+    transform: translateY(-100%)
+    transition: all .5s ease
+
+  .nav--open
+    transform: translateY(0%)
+
+  .nav__menu
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100vw
+    height: 54vh
+
+  .header__top-btnbox
+    display: flex
+    align-items: center
+
+  .header__top-inner
+    padding: 18px 0
+
+  .header__top-btn
+    padding: 12px 21px
+    margin-right: 70px
+
+  .nav__menu-item
+    margin-right: 0
+    border-bottom: 1px solid rgba(255, 255, 255, 0.52)
+    width: 162px
     text-align: center
 
-  .header__title
-    font-size: 36px
-  
+  .nav__menu-link
+    font-weight: 500
+    font-size: 16px
+    line-height: 500%
 
-  
+  .header__body-btn
+    padding: 0 48px
+
+//====================700=======================
+
+@media (max-width: 700px)
+  .header__body-inner
+    max-width: 330px
+    .header__text--media
+      padding: 32px 0
+      font-size: 16px
+      line-height: 31px
+      max-width: 246px
+      margin: 0 auto
+    .header__title
+      font-size: 24px
+      line-height: 40px
+      text-align: center
+      .title__span-1
+        height: 40px
+        max-width: 283px
+        margin-bottom: 40px
+        margin-left: auto
+        margin-right: auto
+        .title__span-3
+          display: block
+          background-color: #07AF91
+          border-bottom-left-radius: 3px
+          border-bottom-right-radius: 3px
+          width: 130px
+          margin-left: 74px
+
+  .header__top-btn
+    font-weight: 500
+    font-size: 14px
+
+  .header__body-btn
+    padding: 0 56px
+    font-size: 16px
+    line-height: 55px
+    border-radius: 5px
+
+  .business__title
+    font-size: 24px
+    line-height: 35px
+    padding: 3px
+
+  .business__text
+    font-size: 14px
+    line-height: 20px
+    margin: 30px 0 27px
+
+  .business
+    height: 630px
+    padding: 100px 10px 100px
+
+  .business__btn
+    font-size: 16px
+    padding: 0 34px
+    line-height: 55px
+    border-radius: 5px
+
+  .service__top-img
+    height: 176px
+
+  .service__bottom-img
+    height: 183px
+
+  .main__title
+    font-size: 24px
+
+  .service__title
+    font-size: 16px
+    line-height: 20px
+
+  .service__text
+    font-size: 14px
+
+  .ho-we__item
+    gap: 10px 0
+
+  .ho-we__content
+    max-width: 320px
+    padding: 37px 23px
+    span
+      font-size: 64px
+    p
+      font-size: 14px

@@ -13,12 +13,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Document</title>
 </head>
 
 <body>
   <div class="wrapper">
+    <div class="overlay"></div>
     <header class="header">
       <div class="header__top">
         <div class="container">
@@ -34,7 +36,13 @@
                 <li class="nav__menu-item"><a class="nav__menu-link" href="#">Новости</a></li>
               </ul>
             </nav>
-            <a class="header__top-btn button-green" href="#">Войти</a>
+            <div class="header__top-btnbox">
+              <a class="header__top-btn button-green" href="#">Войти</a>
+              <a class="burger" href="#">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -42,11 +50,15 @@
         <div class="container">
           <div class="header__body-inner">
             <h1 class="header__title">Запустите
-              <span>технологический IT-бизнес</span>
+              <span class="title__span-1">технологический <span class="title__span-2">IT-</span><span
+                  class="title__span-3">бизнес</span></span>
               на международных рынках
             </h1>
             <p class="header__text">
               Открыт набор заявок на акселератор
+            </p>
+            <p class="header__text--media">
+              Старт ближайшего акселератора <span>15.12.2022</span>
             </p>
             <a class="header__body-btn button-blue" href="#">Подать заявку</a>
           </div>
@@ -71,10 +83,11 @@
                   патенты, медиа,
                   научные публикации
                 </p>
-                <a class="service__btn button-green" href="#">Узнать подробнее</a>
+                <a class="service__btn button-green service__btn--1" href="#">Узнать подробнее</a>
               </div>
               <div class="service__top-slide">
                 <img class="service__top-img" src="images/service-top.jpg.webp" alt="serche">
+                <a class="service__btn button-green service__btn--2" href="#">Узнать подробнее</a>
               </div>
             </div>
             <div class="service__bottom">
@@ -112,7 +125,7 @@
               Для уже работающего технологического бизнес, позволим найти новые международне рынки сбыта, масштабировать
               бизнес
             </div>
-            <div class="ho-we__content">
+            <div class="ho-we__content ho-we__content--third">
               <span>03</span>
               <p>Корпорации</p>
               Для уже работающего технологического бизнес, позволим найти новые международне рынки сбыта, масштабировать
@@ -943,14 +956,9 @@
             <form class="contact__form">
               <input class="contact__input" type="text" placeholder="Имя">
               <input class="contact__input" type="text" placeholder="Почта">
-              <div class="contact__input">
-                <span class="contact__input-arrow"></span>
-                <select name="tel-number" id="tel-number">
-                  <option value="1">(971)</option>
-                  <option value="2">(961)</option>
-                  <option value="3">(951)</option>
+              <div class="contact__input contact__input--num">
+                <select name="country" class="contact__choices">
                 </select>
-                <img src="images/contact-country.svg" alt="">
                 <input type="tel">
               </div>
               <button class="contact__btn button-green" type="submit">Оставить заявку</button>
@@ -976,7 +984,7 @@
           </nav>
           <div class="footer__adress">
             <p>Dubai, Single Business Tower 1503, Business Bay</p>
-            <a href="mailto:Sales@innoma.vc" >Sales@innoma.vc</a>
+            <a href="mailto:Sales@innoma.vc">Sales@innoma.vc</a>
           </div>
         </div>
       </div>
@@ -987,6 +995,7 @@
   integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
+<script src="js/choices.min.js"></script>
 <script src="js/main.js"></script>
 
 </html>
