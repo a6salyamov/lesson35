@@ -351,6 +351,12 @@ body
     font-size: 16px
     color: #000000
 
+.country__content-btn2
+  display: none
+
+.country__content-btn3
+  display: none
+
 .country__content-right
   margin-right: 125px
   display: grid
@@ -397,10 +403,14 @@ body
   transition: $trans
   &:hover
     background-color: $greencolor
-  img
-    display: block
-    margin: 0 auto
-    padding: 45px 0 25px
+
+.country-arrow-1
+  display: block
+  margin: 0 auto
+  padding: 45px 0 25px
+
+.country-arrow-2
+  display: none
 
 //=======================ACCELERAT======================
 .accelerator-it__inner
@@ -417,12 +427,13 @@ body
   display: flex
   justify-content: space-between
   margin-bottom: 20px
+  gap: 0 20px
 
 .accelerator-it__item-box
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09)
   border-radius: 10px
-  min-width: 392px
-  min-height: 284px
+  width: 392px
+  height: 284px
   text-align: center
   font-weight: 500
   font-size: 20px
@@ -476,6 +487,7 @@ body
   max-width: 100%
 
 .programm__accordion-title
+  position: relative
   padding: 10px 0
   font-weight: 500
   font-size: 20px
@@ -483,15 +495,21 @@ body
   cursor: pointer
   padding-left: 50px
   display: flex
-  justify-content: space-between
+  align-items: center
   span
-    margin-right: 11px
+    width: 130px
     font-weight: 700
     font-size: 20px
     line-height: 300%
     color: #2A79C2
   &:last-child
     cursor: auto
+
+.prog__acc-box
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
 
 .programm__accordion-ellipse
   transition: all .5s
@@ -500,9 +518,9 @@ body
   width: 39px
   background-color: #2A79C2
   border-radius: 50%
-  position: relative
-  top: 10px
-  left: -15px
+  position: absolute
+  top: 20px
+  right: 50px
   span
     width: 12px
     height: 4px
@@ -536,8 +554,8 @@ body
     background-color: #2A79C2
     border-radius: 50%
     position: relative
-    top: 10px
-    left: -15px
+    top: 0
+    right: 25px
     span
       width: 12px
       height: 4px
@@ -565,6 +583,14 @@ body
     padding: 5px 0 5px 50px
     &:last-child
       color: #2A79C2
+
+.programm__accordion-text--btn2
+  display: block
+  line-height: 70px
+  vertical-align: middle
+
+.programm__accordion-text--btn1
+  display: none
 
 // =====================BLUE-ICONS======================
 
@@ -636,7 +662,6 @@ body
   margin-top: 20px
 
 .result__content
-  width: 390px
   height: 280px
   margin-bottom: 20px
   margin-right: 20px
@@ -1222,6 +1247,108 @@ div#choices--country-we-item-choice-1
     line-height: 30px
     margin: 20px auto 20px
 
+  .country__menu
+    margin-bottom: 45px
+
+  .country__list-item
+    font-size: 14px
+    line-height: 16px
+    height: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0 40px
+
+  .country__content-title
+    font-size: 24px
+    line-height: 34px
+    margin-bottom: 17px
+
+  .country__content-btn1
+    display: none
+
+  .country__content-btn2
+    display: inline-block
+    padding: 0 46px
+
+  .country__content-user-box
+    margin-top: 30px
+    margin-bottom: 30px
+
+  .country__content-right
+    margin-right: 0
+    max-height: 280px
+
+  .country__content-box
+    max-width: 193px
+    max-height: 133px
+    font-size: 14px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    p
+      font-size: 36px
+      padding-top: 0
+      padding-bottom: 15px
+      span
+        font-size: 20px
+
+  .country-arrow-1
+    display: none
+
+  .country-arrow-2
+    display: block
+    margin: 0 auto
+    padding: 26px 0 15px
+
+  .country__content-box--last
+    padding: 0 38px 27px 38px
+
+  .country__item
+    margin-top: 20px
+
+  .result__content
+    font-size: 14px
+    padding: 44px 10px 0
+    span
+      font-size: 64px
+    p
+      font-size: 14px
+
+  .price__item
+    flex-wrap: wrap
+    gap: 20px 20px
+    justify-content: start
+
+  .price__content
+    max-width: 342px
+
+  .price__icon
+    height: 181px
+    p
+      font-size: 18px
+    img
+      transform: scale(0.9)
+
+  .price__list
+    margin-bottom: -35px
+    p
+      font-size: 16px
+    ol
+      font-size: 14px
+
+  .price__text-item
+    font-size: 14px
+    span
+      font-size: 16px
+
+  .price__text-blue
+    font-size: 16px
+
+  .price__btn
+    line-height: 70px
+    margin: 0 32px
+
 //====================1000px==========================
 @media ( max-width: 1000px )
   .header__top-inner
@@ -1233,7 +1360,7 @@ div#choices--country-we-item-choice-1
   .logo__img
     width: 124px
 
-  .button-green
+  .service__btn
     padding: 15px 28px
     border-radius: 5px
 
@@ -1266,6 +1393,238 @@ div#choices--country-we-item-choice-1
 
   .button-blue
     font-size: 18px
+
+  .accelerator-it__text
+    text-align: center
+    font-size: 16px
+    margin-top: 0
+
+  .accelerator-it__item-box
+    font-size: 16px
+    line-height: 19px
+
+  .accelerator-it__video
+    min-height: 345px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  .accelerator-it__video-text
+    font-size: 18px
+    line-height: 28px
+    padding-top: 0
+    max-width: 221px
+
+  .accelerator-it__video-img
+    width: 89px
+    height: 89px
+    margin-top: 20px
+    img
+      height: 60px
+
+  .accelerator-it__item-text
+    max-width: 140px
+    margin: 0 auto
+
+  .accelerator-it__item-text--last
+    margin-top: 40px
+
+  .programm__accordion-title
+    font-size: 16px
+    p
+      text-align: center
+    span
+      font-size: 16px
+
+  .prog__acc-box
+    p
+      flex-grow: 1
+      line-height: 20px
+      margin-right: 90px
+
+  .programm__accordion-text
+    font-size: 14px
+    line-height: 25px
+    p
+      height: 70px
+      padding-right: 50px
+
+  .programm__accordion-ellipse
+    height: 30px
+    width: 30px
+    right: 30px
+    span
+      height: 3px
+      top: 15px
+      left: 6px
+      &:last-child
+        left: 13px
+
+  .programm__accordion-title--active
+    .programm__accordion-ellipse
+      height: 30px
+      width: 30px
+      right: 30px
+      span
+        height: 3px
+        top: 15px
+        left: 6px
+        &:last-child
+          left: 13px
+
+  .programm-btn
+    display: none
+
+  .blue-icons__inner
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 117px 0
+
+  .blue-icons__content
+    margin-bottom: 50px
+    text-align: center
+
+  .blue-icons
+    height: 1010px
+
+  .blue-icons__title
+    margin: 0 0 30px 0
+    font-size: 32px
+
+  .blue-icons__text
+    margin-bottom: 30px
+
+  .blue-icons__item
+    margin: 0
+
+//=====================900px=========================
+@media (max-width: 900px)
+  .prog__acc-box
+    p
+      max-width: 400px
+      padding-right: 0
+
+//=====================750px=========================
+@media (max-width:750px)
+  .programm__accordion-text
+    font-size: 12px
+    p
+      padding: 0
+      text-align: center
+
+  .programm__accordion-text--btn1
+    display: none
+
+  .programm__accordion-text--btn2
+    display: block
+
+  .programm__accordion-title
+    flex-direction: column
+    padding: 17px 0
+    align-items: center
+    span
+      font-size: 12px
+      line-height: 20px
+      text-align: center
+
+  .prog__acc-box
+    justify-content: center
+    p
+      font-size: 12px
+      line-height: 20px
+      max-width: 240px
+      margin: 0
+
+  .programm__accordion-ellipse
+    top: 80px
+    left: 50%
+    transform: translateX(-50%)
+
+  .programm__accordion-title--active
+    .programm__accordion-ellipse
+      height: 30px
+      width: 30px
+      left: -40%
+      top: 40px
+      span
+        height: 3px
+        top: 15px
+        left: 6px
+        &:last-child
+          left: 13px
+
+  .prog__acc-box--5
+    max-width: 163px
+    text-align: center
+
+  .programm__accordion-title--active
+    .programm__accordion-ellipse--5
+      width: 50px
+
+  .result__item
+    grid-template: none
+
+  .result__inner
+    margin-top: 0
+
+  .result__content
+    margin-bottom: 10px
+    margin-right: 0
+    height: 204px
+    &:nth-child(4)
+      margin-bottom: 10px
+    &:nth-child(5)
+      margin-bottom: 10px
+
+  .result__content
+    padding: 40px 43px 0
+    font-size: 12px
+    span
+      font-size: 48px
+    p
+      font-size: 14px
+      margin: 20px 0 5px
+
+  .price__item
+    justify-content: center
+
+  .price__content
+    max-width: 320px
+
+  .price__icon
+    height: 120px
+    display: flex
+    align-items: center
+    padding: 0 30px
+    p
+      font-size: 16px
+      text-align: left
+      margin-left: 14px
+    img
+      transform: scale(0.8)
+
+  .price__list
+    margin-bottom: -70px
+    p
+      font-size: 14px
+    ol
+      font-size: 12px
+
+  .price__text-item
+    font-size: 12px
+    span
+      font-size: 14px
+
+  .price__text-blue
+    font-size: 14px
+
+  .price__btn
+    font-size: 16px
+    line-height: 55px
+    margin: 0 32px
+    border-radius: 5px
 
 //=====================730px=========================
 
@@ -1342,6 +1701,117 @@ div#choices--country-we-item-choice-1
   .header__body-btn
     padding: 0 48px
 
+  .country__menu
+    margin-bottom: 20px
+
+  .country__item
+    margin-top: 22px
+
+  .country__content
+    flex-direction: column
+
+  .country__content-btn2
+    display: none
+
+  .country__content-btn3
+    display: block
+    text-align: center
+    font-size: 16px
+    line-height: 55px
+    border-radius: 5px
+    max-width: 320px
+
+  .country__content-left
+    margin-bottom: 15px
+
+  .country__content-right
+    max-width: 340px
+    margin-bottom: 12px
+
+  .country__content-title
+    font-size: 18px
+
+  .country__content-tex
+    font-size: 14px
+
+  .country__content-user-text
+    font-size: 10px
+    line-height: 15px
+    span
+      font-size: 12px
+
+  .country__content-user-img
+    img
+      height: 40px
+      width: 40px
+
+  .country__content-user-box
+    margin-top: 36px
+    margin-bottom: 0
+
+  .country__content-box
+    max-width: 150px
+    max-height: 134px
+    font-size: 12px
+    padding: 0 30px
+    p
+      font-size: 24px
+      padding-bottom: 10px
+      span
+        display: block
+        font-size: 16px
+        padding-top: 10px
+
+  .country__content-box--last
+    padding: 0 25px 35px 25px
+
+  .accelerator-it__text
+    margin-top: 10px
+    font-size: 14px
+    line-height: 19px
+
+  .accelerator-it__item
+    flex-direction: column
+    gap: 20px 0
+
+  .accelerator-it__item-box
+    width: 100%
+    height: 143px
+    display: flex
+    align-items: center
+    justify-content: start
+    padding-left: 30px
+
+  .accelerator-it__item-img
+    margin: 0
+    padding: 0
+    width: 52px
+    margin-right: 20px
+
+  .accelerator-it__item-text
+    margin: 0
+    max-width: 100%
+    font-size: 14px
+    line-height: 17px
+
+  .accelerator-it__item-text--last
+    margin: 0
+
+  .accelerator-it__video
+    min-height: 200px
+
+  .accelerator-it__video-text
+    font-size: 16px
+
+  .accelerator-it__video-img
+    height: 63px
+    width: 63px
+    img
+      height: 46px
+
+  .programm__accordion-text--1
+    display: none
+
 //====================700=======================
 
 @media (max-width: 700px)
@@ -1409,6 +1879,7 @@ div#choices--country-we-item-choice-1
 
   .main__title
     font-size: 24px
+    line-height: 35px
 
   .service__title
     font-size: 16px
@@ -1427,3 +1898,50 @@ div#choices--country-we-item-choice-1
       font-size: 64px
     p
       font-size: 14px
+
+  .country__list-item
+    font-size: 10px
+    padding: 0
+    flex-basis: 180px
+    text-align: center
+
+  .blue-icons__inner
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 100px 0
+
+  .blue-icons__content
+    margin-bottom: 50px
+    text-align: center
+
+  .blue-icons
+    height: 750px
+
+  .blue-icons__title
+    margin: 0 0 27px 0
+    font-size: 24px
+    line-height: 40px
+    max-width: 324px
+
+  .blue-icons__text
+    font-size: 14px
+    margin-bottom: 33px
+
+  .blue-icons-btn
+    width: 100%
+    text-align: center
+    font-size: 16px
+    padding: 0 47px
+    line-height: 55px
+
+  .blue-icons__brands
+    margin: 0 11px 11px 0
+    height: 66px
+    line-height: 66px
+    width: 121px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      transform: scale(0.5)
