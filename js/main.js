@@ -37,9 +37,9 @@ const defaultSelect = () => {
 
 defaultSelect();
 
-$(function(){
+$(function () {
   $(".country__content").not(":first").hide()
-  $(".country__list .country__list-item").on("click", function(){
+  $(".country__list .country__list-item").on("click", function () {
     $(".country__list .country__list-item").removeClass("country__list--active").eq($(this).index()).addClass("country__list--active")
     $(".country__content").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("country__list--active")
@@ -56,6 +56,43 @@ $(function(){
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
+    responsive:
+      [
+        {
+          breakpoint: 1250,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 3,
+            centerMode: true,
+          }
+        },
+        {
+          breakpoint: 850,
+          settings: {
+            slidesToShow: 3,
+            centerMode: true,
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            slidesToShow: 2,
+            centerMode: true,
+          }
+        },
+        {
+          breakpoint: 540,
+          settings: {
+            slidesToShow: 1,
+            centerMode: true,
+          }
+        }
+      ]
   });
 
   $('.experts__slider').slick({
@@ -64,16 +101,43 @@ $(function(){
     slidesToScroll: 1,
     dots: false,
     speed: 1000,
-    prevArrow: '<span class="prev_arrow"><div class="programm__accordion-ellipse"><span></span><span></span></div></span>',
-    nextArrow: '<span class="next_arrow"><div class="programm__accordion-ellipse"><span></span><span></span></div></span>',
+    prevArrow: '<span class="prev_arrow"><div class="programm__accordion-ellipse--2"><span></span><span></span></div></span>',
+    nextArrow: '<span class="next_arrow"><div class="programm__accordion-ellipse--2"><span></span><span></span></div></span>',
+    responsive:
+      [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 3,
+            variableWidth: true,
+            prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+            nextArrow: '<button type="button" class="slick-next">Next</button>'
+          }
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 2,
+            variableWidth: true,
+            prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+            nextArrow: '<button type="button" class="slick-next">Next</button>'
+          }
+        },
+      ]
   });
 
-  $('.burger, .overlay').on('click', function(e) {
+  $('.burger, .overlay').on('click', function (e) {
     e.preventDefault()
     $('.nav').toggleClass('nav--open')
     $('.burger').toggleClass('burger--close')
     $('.overlay').toggleClass('overlay--show')
-  } )
+  })
 
 })
 
@@ -81,9 +145,9 @@ document.querySelectorAll('.programm__accordion-title').forEach((el) => {
   el.addEventListener('click', () => {
     let content = el.nextElementSibling;
     console.log(content)
-    if(content.style.maxHeight) {
+    if (content.style.maxHeight) {
       document.querySelectorAll('.programm__accordion-text').forEach(el => el.style.maxHeight = null)
-    } else{
+    } else {
       document.querySelectorAll('.programm__accordion-text').forEach(el => el.style.maxHeight = null)
       content.style.maxHeight = content.scrollHeight + 'px'
     }

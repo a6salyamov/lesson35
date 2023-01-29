@@ -789,6 +789,9 @@ body
   p
     margin-bottom: 32px
 
+.about-us__top-text--2
+  display: none
+
 .about-us__founder
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09)
   border-radius: 10px
@@ -807,6 +810,9 @@ body
   font-size: 16px
   line-height: 162%
   color: #000000
+  br
+    &:nth-child(3)
+      display: none
   div
     margin-top: 47px
     font-style: normal
@@ -821,6 +827,11 @@ body
 
 .about-us__slider-item
   border-radius: 10px
+  width: 100%
+
+.about-us__slider
+  max-width: 1200px
+  margin: 0 auto 100px
 
 //================EXPERTS======================
 
@@ -832,8 +843,9 @@ body
   position: relative
 
 .experts__slider-item
-  max-width: 267px
+  width: 267px
   text-align: center
+  padding-right: 20px
 
 .experts__slider-img
   border-radius: 50%
@@ -859,18 +871,59 @@ body
     font-size: 0
     cursor: pointer
   .prev_arrow
-    top: 120px
-    left: 11px
+    top: 190px
+    left: 30px
     transform: rotate(90deg)
-    .programm__accordion-ellipse
-      &:hover
-        transform: scale(1.3)
+    .programm__accordion-ellipse--2
+      transition: all .5s
+      display: inline-block
+      height: 39px
+      width: 39px
+      background-color: #2A79C2
+      border-radius: 50%
+      position: absolute
+      top: 20px
+      right: 50px
+      span
+        width: 12px
+        height: 4px
+        background-color: #FFFFFF
+        border-radius: 10px
+        position: absolute
+        z-index: 10
+        top: 19px
+        left: 10px
+        transform: rotate(45deg)
+        &:last-child
+          transform: rotate(-45deg)
+          left: 17px
   .next_arrow
-    right: 10px
+    top: 55px
+    right: 30px
     transform: rotate(-90deg)
-    .programm__accordion-ellipse
-      &:hover
-        transform: scale(1.3)
+    .programm__accordion-ellipse--2
+      transition: all .5s
+      display: inline-block
+      height: 39px
+      width: 39px
+      background-color: #2A79C2
+      border-radius: 50%
+      position: absolute
+      top: 20px
+      right: 50px
+      span
+        width: 12px
+        height: 4px
+        background-color: #FFFFFF
+        border-radius: 10px
+        position: absolute
+        z-index: 10
+        top: 19px
+        left: 10px
+        transform: rotate(45deg)
+        &:last-child
+          transform: rotate(-45deg)
+          left: 17px
 
 //=====================PARTNERS======================
 
@@ -881,6 +934,7 @@ body
   margin-top: 20px
   display: grid
   grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr
+  gap: 20px 20px
 
 .partners__content-item
   background: #FFFFFF
@@ -889,19 +943,8 @@ body
   text-align: center
   height: 100px
   line-height: 100px
-  margin: 0 20px 20px 0
   img
     vertical-align: middle
-  &:nth-child(4)
-    margin-right: 0
-  &:nth-child(5)
-    margin-bottom: 0
-  &:nth-child(6)
-    margin-bottom: 0
-  &:nth-child(7)
-    margin-bottom: 0
-  &:nth-child(8)
-    margin: 0
 
 //=====================BECOM-PARTNER=====================
 
@@ -1174,6 +1217,80 @@ div#choices--country-we-item-choice-1
 
 //=====================MEDIA=============================
 
+//====================1300px=============================
+@media (max-width: 1300px)
+  .experts__slider
+    position: relative
+    .slick-arrow
+      position: absolute
+      top: 90px
+      z-index: 2
+      font-size: 0
+      cursor: pointer
+    .prev_arrow
+      top: 487px
+      left: 385px
+      transform: rotate(90deg)
+      .programm__accordion-ellipse--2
+        transition: all .5s
+        display: inline-block
+        height: 39px
+        width: 39px
+        background-color: #2A79C2
+        border-radius: 50%
+        position: absolute
+        top: 20px
+        right: 50px
+        span
+          width: 12px
+          height: 4px
+          background-color: #FFFFFF
+          border-radius: 10px
+          position: absolute
+          z-index: 10
+          top: 19px
+          left: 10px
+          transform: rotate(45deg)
+          &:last-child
+            transform: rotate(-45deg)
+            left: 17px
+    .next_arrow
+      top: 348px
+      right: 400px
+      transform: rotate(-90deg)
+      .programm__accordion-ellipse--2
+        transition: all .5s
+        display: inline-block
+        height: 39px
+        width: 39px
+        background-color: #2A79C2
+        border-radius: 50%
+        position: absolute
+        top: 20px
+        right: 50px
+        span
+          width: 12px
+          height: 4px
+          background-color: #FFFFFF
+          border-radius: 10px
+          position: absolute
+          z-index: 10
+          top: 19px
+          left: 10px
+          transform: rotate(45deg)
+          &:last-child
+            transform: rotate(-45deg)
+            left: 17px
+
+  .experts__slider-item
+    margin: 0 30px
+
+  .experts__slider
+    padding: 0
+
+  .experts__inner
+    margin-bottom: 150px
+
 //====================1200px=============================
 @media (max-width: 1200px)
   .main__title
@@ -1349,6 +1466,31 @@ div#choices--country-we-item-choice-1
     line-height: 70px
     margin: 0 32px
 
+  .about-us__top
+    flex-direction: column
+    align-items: center
+    text-align: center
+    margin-top: 20px
+
+  .about-us__top-img
+    margin-right: 0
+
+  .about-us__top-text--1
+    display: none
+
+  .about-us__top-text--2
+    display: block
+    padding: 0 33px
+
+  .about-us__top-text
+    margin-top: 25px
+
+  .about-us__founder
+    flex-direction: column-reverse
+    max-width: 728px
+    margin: 0 auto 100px
+    padding-top: 37px
+
 //====================1000px==========================
 @media ( max-width: 1000px )
   .header__top-inner
@@ -1499,12 +1641,88 @@ div#choices--country-we-item-choice-1
   .blue-icons__item
     margin: 0
 
+  .about-us__slider
+    max-width: 100%
+
+  .partners__content
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr
+    max-width: 493px
+    margin: 20px auto 0
+
+  .partners__content-item
+    height: 82px
+    line-height: 82px
+
 //=====================900px=========================
 @media (max-width: 900px)
   .prog__acc-box
     p
       max-width: 400px
       padding-right: 0
+
+  .about-us__slider-item
+    img
+      width: 204px
+
+  .experts__slider
+    .next_arrow
+      .programm__accordion-ellipse--2
+        display: none
+
+  .experts__slider
+    position: relative
+    .slick-arrow
+      position: absolute
+      width: 154px
+      height: auto
+      top: 415px
+    .slick-prev
+      background: url('../images/arrows-adaptive-prew.svg') center/ 100% no-repeat
+      width: 160px
+      height: 10px
+      left: 0
+    .slick-next
+      background: url('../images/arrows-adaptive-next.svg') center/ 100% no-repeat
+      width: 160px
+      height: 10px
+      right: 0
+
+  .experts__slider-item
+    width: auto
+    padding-right: 0
+
+  .experts__slider-text
+    margin: 0 auto
+
+//=====================750px=========================
+@media (max-width: 768px)
+  .about-us__top-img
+    img
+      width: 345px
+
+  .about-us__top-text
+    font-size: 18px
+
+  .about-us__founder-text
+    position: relative
+    max-width: 579px
+    font-style: normal
+    text-align: center
+    br
+      &:nth-child(3)
+        display: inline
+      &:nth-child(4)
+        display: none
+    div
+      text-align: left
+      margin-top: 0
+      position: absolute
+      top: 535px
+      left: -35px
+      max-width: 600px
+
+  .about-us__founder-img
+    margin-left: 0
 
 //=====================750px=========================
 @media (max-width:750px)
@@ -1812,6 +2030,27 @@ div#choices--country-we-item-choice-1
   .programm__accordion-text--1
     display: none
 
+  .about-us__founder
+    max-width: 318px
+    padding-top: 30px
+
+  .about-us__founder-text
+    padding: 0 23px 0 30px
+    text-align: left
+    font-size: 14px
+    div
+      max-width: 70px
+      font-size: 11px
+      line-height: 14px
+      top: 350px
+      left: 220px
+      p
+        font-size: 11px
+
+  .about-us__founder-img
+    img
+      width: 234px
+
 //====================700=======================
 
 @media (max-width: 700px)
@@ -1945,3 +2184,72 @@ div#choices--country-we-item-choice-1
     align-items: center
     img
       transform: scale(0.5)
+
+  .about-us__top-img
+    img
+      width: 266px
+
+  .about-us__top-text
+    font-size: 14px
+    margin-top: 20px
+    padding: 0
+    max-width: 322px
+
+  .about-us__top
+    margin-top: 10px
+    margin-bottom: 100px
+
+  .slick-slide
+    img
+      transform: scale(0.8)
+
+  .experts__slider-text
+    font-size: 12px
+    max-width: 204px
+    p
+      font-size: 16px
+
+  .experts__slider-item
+    margin: 0 26px
+
+  .experts__slider
+    position: relative
+    .slick-arrow
+      position: absolute
+      width: 90px
+      height: auto
+      top: 415px
+    .slick-prev
+      background: url('../images/expert-arrow-prew.svg') center/ 100% no-repeat
+      width: 90px
+      height: 10px
+      left: 0
+    .slick-next
+      background: url('../images/expert-arrow-next.svg') center/ 100% no-repeat
+      width: 90px
+      height: 10px
+      right: 0
+
+  .partners__content
+    max-width: 322px
+    gap: 11px 11px
+
+  .partners__content-item
+    height: 53px
+    line-height: 52px
+    width: 154px
+    img
+      transform: scale(0.5)
+      vertical-align: middle
+    &:nth-child(5)
+      img
+        transform: scale(0.5) translate(-43px, -33px)
+    &:nth-child(6)
+      img
+        transform: scale(0.5) translate(-6px, -46px)
+    &:nth-child(7)
+      img
+        transform: scale(0.5) translate(-67px, 0px)
+      
+
+        
