@@ -709,7 +709,7 @@ body {
   border-radius: 50%;
   position: relative;
   top: 0;
-  right: 25px;
+  right: 50px;
 }
 .programm__accordion-title--active .programm__accordion-ellipse span {
   width: 12px;
@@ -1055,7 +1055,8 @@ body {
 
 .about-us__slider-item {
   border-radius: 10px;
-  width: 100%;
+  width: auto;
+  margin: 0 4px;
 }
 
 .about-us__slider {
@@ -2164,6 +2165,7 @@ div#choices--country-we-item-choice-1 {
     height: 3px;
     top: 15px;
     left: 6px;
+    border-radius: 5px;
   }
   .programm__accordion-ellipse span:last-child {
     left: 13px;
@@ -2178,6 +2180,7 @@ div#choices--country-we-item-choice-1 {
     height: 3px;
     top: 15px;
     left: 6px;
+    border-radius: 5px;
   }
   .programm__accordion-title--active .programm__accordion-ellipse span:last-child {
     left: 13px;
@@ -2401,6 +2404,7 @@ div#choices--country-we-item-choice-1 {
   }
 
   .programm__accordion-title {
+    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2429,25 +2433,11 @@ div#choices--country-we-item-choice-1 {
   }
 
   .programm__accordion-ellipse {
+    position: absolute;
     top: 80px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-  }
-
-  .programm__accordion-title--active .programm__accordion-ellipse {
-    height: 30px;
-    width: 30px;
-    left: -40%;
-    top: 40px;
-  }
-  .programm__accordion-title--active .programm__accordion-ellipse span {
-    height: 3px;
-    top: 15px;
-    left: 6px;
-  }
-  .programm__accordion-title--active .programm__accordion-ellipse span:last-child {
-    left: 13px;
   }
 
   .prog__acc-box--5 {
@@ -2455,8 +2445,12 @@ div#choices--country-we-item-choice-1 {
     text-align: center;
   }
 
-  .programm__accordion-title--active .programm__accordion-ellipse--5 {
-    width: 50px;
+  .programm__accordion-title--active .programm__accordion-ellipse {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotate(180deg);
+            transform: translateX(-50%) rotate(180deg);
   }
 
   .result__item {
@@ -2724,6 +2718,9 @@ div#choices--country-we-item-choice-1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .country__content-btn2 {
@@ -2736,7 +2733,7 @@ div#choices--country-we-item-choice-1 {
     font-size: 16px;
     line-height: 55px;
     border-radius: 5px;
-    max-width: 320px;
+    width: 100%;
   }
 
   .country__content-left {
@@ -2745,7 +2742,7 @@ div#choices--country-we-item-choice-1 {
 
   .country__content-right {
     max-width: 340px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 
   .country__content-title {
@@ -3038,7 +3035,7 @@ div#choices--country-we-item-choice-1 {
     width: 100%;
     text-align: center;
     font-size: 16px;
-    padding: 0 47px;
+    padding: 0;
     line-height: 55px;
   }
 
@@ -3076,6 +3073,11 @@ div#choices--country-we-item-choice-1 {
   .about-us__top {
     margin-top: 10px;
     margin-bottom: 100px;
+  }
+
+  .about-us__slider-item {
+    width: 162px;
+    margin: 0 3px;
   }
 
   .slick-slide img {
@@ -3278,5 +3280,28 @@ div#choices--country-we-item-choice-1 {
   }
   .footer__adress p {
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 355px) {
+  .blue-icons-btn {
+    font-size: 13px;
+    padding: 0;
+  }
+
+  .becom-partner__btn {
+    padding: 0;
+  }
+}
+@media (max-width: 340px) {
+  .about-us__founder-text div {
+    left: 215px;
+  }
+
+  .partners__content-item {
+    width: 137px;
+  }
+
+  .contact__form {
+    width: 285px;
   }
 }

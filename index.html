@@ -21,19 +21,19 @@
 <body>
   <div class="wrapper">
     <div class="overlay"></div>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__top">
         <div class="container">
           <div class="header__top-inner">
-            <a class="logo" href="#">
+            <a class="logo" href="#header">
               <img class="logo__img" src="images/title-icon.svg" alt="">
             </a>
             <nav class="nav">
               <ul class="nav__menu">
-                <li class="nav__menu-item"><a class="nav__menu-link" href="#">Кто мы?</a></li>
-                <li class="nav__menu-item"><a class="nav__menu-link" href="#">Услуги</a></li>
-                <li class="nav__menu-item"><a class="nav__menu-link" href="#">Акселератор</a></li>
-                <li class="nav__menu-item"><a class="nav__menu-link" href="#">Новости</a></li>
+                <li class="nav__menu-item"><a class="nav__menu-link" href="#about-us">Кто мы?</a></li>
+                <li class="nav__menu-item"><a class="nav__menu-link" href="#service">Услуги</a></li>
+                <li class="nav__menu-item"><a class="nav__menu-link" href="#accelerator-it">Акселератор</a></li>
+                <li class="nav__menu-item"><a class="nav__menu-link" href="#events">Новости</a></li>
               </ul>
             </nav>
             <div class="header__top-btnbox">
@@ -60,14 +60,14 @@
             <p class="header__text--media">
               Старт ближайшего акселератора <span>15.12.2022</span>
             </p>
-            <a class="header__body-btn button-blue" href="#">Подать заявку</a>
+            <a class="header__body-btn button-blue" href="#contact">Подать заявку</a>
           </div>
         </div>
       </div>
       <div class="none"></div>
     </header>
     <main class="main">
-      <section class="service">
+      <section class="service" id="service">
         <div class="container">
           <div class="service__inner">
             <h3 class="main__title">Наши услуги</h3>
@@ -83,11 +83,11 @@
                   патенты, медиа,
                   научные публикации
                 </p>
-                <a class="service__btn button-green service__btn--1" href="#">Узнать подробнее</a>
+                <a class="service__btn button-green service__btn--1" href="#contact">Узнать подробнее</a>
               </div>
               <div class="service__top-slide">
                 <img class="service__top-img" src="images/service-top.jpg.webp" alt="serche">
-                <a class="service__btn button-green service__btn--2" href="#">Узнать подробнее</a>
+                <a class="service__btn button-green service__btn--2" href="#contact">Узнать подробнее</a>
               </div>
             </div>
             <div class="service__bottom">
@@ -103,7 +103,7 @@
                   международных инвесторов
                   и локальных партнеров
                 </p>
-                <a class="service__btn button-green" href="#">Узнать подробнее</a>
+                <a class="service__btn button-green" href="#contact">Узнать подробнее</a>
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@
         <p class="business__text">
           Наша команда поможет вам изучить рынки Ближнего Востока, Азии, Латинской Америки и Африки
         </p>
-        <a class="business__btn button-blue" href="#">
+        <a class="business__btn button-blue" href="#contact">
           Получить консультацию</a>
       </section>
       <section class="country">
@@ -166,7 +166,7 @@
                   <p class="country__content-text">ОАЭ, Саудовская Аравия,
                     Израиль, Оман, Бахрейн, Катар,
                     Тунис, Йемен, Египет, Алжир</p>
-                  <a class="button-blue country__content-btn1" href="#">Выйти на рынок</a>
+                  <a class="button-blue country__content-btn1" href="#contact">Выйти на рынок</a>
                   <div class="country__content-user-box">
                     <div class="country__content-user-img">
                       <img src="images/country-user.jpg" alt="">
@@ -176,7 +176,51 @@
                       Менеджер по MENA
                     </div>
                   </div>
-                  <a class="button-blue country__content-btn2" href="#">Выйти на рынок</a>
+                  <a class="button-blue country__content-btn2" href="#contact">Выйти на рынок</a>
+                </div>
+                <div class="country__content-right">
+                  <div class="country__content-box">
+                    <p>>5,5
+                      <span>Млрд</span>
+                    </p>
+                    Инвестиции pre-seed, seed
+                  </div>
+                  <div class="country__content-box">
+                    <p>>300</p>
+                    Акселераторов, инкубаторов
+                  </div>
+                  <div class="country__content-box">
+                    <p>73</p>
+                    Венчурных фонда
+                  </div>
+                  <a class="country__content-box country__content-box--last" href="#">
+                    <img class="country-arrow-1" src="images/country-arrow.svg" alt="">
+                    <img class="country-arrow-2" src="images/country-arrow-2.svg" alt="">
+                    Скачать отчет
+                    по рынку MENA
+                  </a>
+                </div>
+                <a class="button-blue country__content-btn3" href="#contact">Выйти на рынок</a>
+              </div>
+              <div class="country__content">
+                <div class="country__content-left">
+                  <h5 class="country__content-title">Чем интересен
+                    <span>Рынок MENA:</span>
+                  </h5>
+                  <p class="country__content-text">ОАЭ, Саудовская Аравия,
+                    Израиль, Оман, Бахрейн, Катар,
+                    Тунис, Йемен, Египет, Алжир</p>
+                  <a class="button-blue country__content-btn1" href="#contact">Выйти на рынок</a>
+                  <div class="country__content-user-box">
+                    <div class="country__content-user-img">
+                      <img src="images/country-user.jpg" alt="">
+                    </div>
+                    <div class="country__content-user-text">
+                      <span>Фатима</span>
+                      Менеджер по MENA
+                    </div>
+                  </div>
+                  <a class="button-blue country__content-btn2" href="#contact">Выйти на рынок</a>
                 </div>
                 <div class="country__content-right">
                   <div class="country__content-box">
@@ -210,7 +254,7 @@
                   <p class="country__content-text">ОАЭ, Саудовская Аравия,
                     Израиль, Оман, Бахрейн, Катар,
                     Тунис, Йемен, Египет, Алжир</p>
-                  <a class="button-blue country__content-btn1" href="#">Выйти на рынок</a>
+                  <a class="button-blue country__content-btn1" href="#contact">Выйти на рынок</a>
                   <div class="country__content-user-box">
                     <div class="country__content-user-img">
                       <img src="images/country-user.jpg" alt="">
@@ -220,7 +264,7 @@
                       Менеджер по MENA
                     </div>
                   </div>
-                  <a class="button-blue country__content-btn2" href="#">Выйти на рынок</a>
+                  <a class="button-blue country__content-btn2" href="#contact">Выйти на рынок</a>
                 </div>
                 <div class="country__content-right">
                   <div class="country__content-box">
@@ -244,7 +288,7 @@
                     по рынку MENA
                   </a>
                 </div>
-                <a class="button-blue country__content-btn3" href="#">Выйти на рынок</a>
+                <a class="button-blue country__content-btn3" href="#contact">Выйти на рынок</a>
               </div>
               <div class="country__content">
                 <div class="country__content-left">
@@ -254,7 +298,7 @@
                   <p class="country__content-text">ОАЭ, Саудовская Аравия,
                     Израиль, Оман, Бахрейн, Катар,
                     Тунис, Йемен, Египет, Алжир</p>
-                  <a class="button-blue country__content-btn1" href="#">Выйти на рынок</a>
+                  <a class="button-blue country__content-btn1" href="#contact">Выйти на рынок</a>
                   <div class="country__content-user-box">
                     <div class="country__content-user-img">
                       <img src="images/country-user.jpg" alt="">
@@ -264,51 +308,7 @@
                       Менеджер по MENA
                     </div>
                   </div>
-                  <a class="button-blue country__content-btn2" href="#">Выйти на рынок</a>
-                </div>
-                <div class="country__content-right">
-                  <div class="country__content-box">
-                    <p>>5,5
-                      <span>Млрд</span>
-                    </p>
-                    Инвестиции pre-seed, seed
-                  </div>
-                  <div class="country__content-box">
-                    <p>>300</p>
-                    Акселераторов, инкубаторов
-                  </div>
-                  <div class="country__content-box">
-                    <p>73</p>
-                    Венчурных фонда
-                  </div>
-                  <a class="country__content-box country__content-box--last" href="#">
-                    <img class="country-arrow-1" src="images/country-arrow.svg" alt="">
-                    <img class="country-arrow-2" src="images/country-arrow-2.svg" alt="">
-                    Скачать отчет
-                    по рынку MENA
-                  </a>
-                </div>
-                <a class="button-blue country__content-btn3" href="#">Выйти на рынок</a>
-              </div>
-              <div class="country__content">
-                <div class="country__content-left">
-                  <h5 class="country__content-title">Чем интересен
-                    <span>Рынок MENA:</span>
-                  </h5>
-                  <p class="country__content-text">ОАЭ, Саудовская Аравия,
-                    Израиль, Оман, Бахрейн, Катар,
-                    Тунис, Йемен, Египет, Алжир</p>
-                  <a class="button-blue country__content-btn1" href="#">Выйти на рынок</a>
-                  <div class="country__content-user-box">
-                    <div class="country__content-user-img">
-                      <img src="images/country-user.jpg" alt="">
-                    </div>
-                    <div class="country__content-user-text">
-                      <span>Фатима</span>
-                      Менеджер по MENA
-                    </div>
-                  </div>
-                  <a class="button-blue country__content-btn2" href="#">Выйти на рынок</a>
+                  <a class="button-blue country__content-btn2" href="#contact">Выйти на рынок</a>
                 </div>
                 <div class="country__content-right">
                   <div class="country__content-box">
@@ -338,7 +338,7 @@
           </div>
         </div>
       </section>
-      <section class="accelerator-it">
+      <section class="accelerator-it" id="accelerator-it">
         <div class="container">
           <div class="accelerator-it__inner">
             <h3 class="main__title">Об акселераторе IT бизнеса</h3>
@@ -617,7 +617,7 @@
                 </div>
               </div>
             </div>
-            <a class="button-blue programm-btn" href="#">Получить полную программу</a>
+            <a class="button-blue programm-btn" href="#contact">Получить полную программу</a>
           </div>
       </section>
       <section class="blue-icons">
@@ -627,7 +627,7 @@
               <h3 class="blue-icons__title">Попадите на радары инвесторов и партнеров</h3>
               <div class="blue-icons__text">В результате прохождения обучения мы создадим профили вашей компании на всех
                 международных скаутинговых площадках</div>
-              <a class="button-green blue-icons-btn" href="#">Записаться в акселератор</a>
+              <a class="button-green blue-icons-btn" href="#contact">Записаться в акселератор</a>
             </div>
             <div class="blue-icons__item">
               <div class="blue-icons__brands">
@@ -725,7 +725,7 @@
                     <p class="price__text-blue">$1 000</p>
                   </div>
                 </div>
-                <a class="button-blue price__btn" href="#">Оставить заявку</a>
+                <a class="button-blue price__btn" href="#contact">Оставить заявку</a>
               </div>
               <div class="price__content">
                 <div class="price__icon">
@@ -757,7 +757,7 @@
                     <p class="price__text-blue">$1 000</p>
                   </div>
                 </div>
-                <a class="button-blue price__btn" href="#">Оставить заявку</a>
+                <a class="button-blue price__btn" href="#contact">Оставить заявку</a>
               </div>
               <div class="price__content">
                 <div class="price__icon">
@@ -790,13 +790,13 @@
                     <p class="price__text-blue">$1 000</p>
                   </div>
                 </div>
-                <a class="button-blue price__btn" href="#">Оставить заявку</a>
+                <a class="button-blue price__btn" href="#contact">Оставить заявку</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="about-us">
+      <section class="about-us" id="about-us">
         <div class="container">
           <div class="about-us__inner">
             <h3 class="main__title">Кто мы?</h3>
@@ -978,11 +978,11 @@
             <p class="becom-partner__text">Если вы или ваш бизнес может быть полезен IT командам при выходе на
               международные рынки, приглашем вас стать нашим
               партнером</p>
-            <a class="button-blue becom-partner__btn" href="#">Стать партнером</a>
+            <a class="button-blue becom-partner__btn" href="#contact">Стать партнером</a>
           </div>
         </div>
       </section>
-      <section class="events">
+      <section class="events" id="events">
         <div class="container">
           <div class="events__inner">
             <h3 class="main__title">Мероприятия и события</h3>
@@ -1021,7 +1021,7 @@
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <div class="contact__inner">
             <div class="contact__left">
@@ -1072,10 +1072,10 @@
           </div>
           <nav class="nav">
             <ul class="nav__menu">
-              <li class="nav__menu-item"><a class="nav__menu-link" href="#">Кто мы?</a></li>
-              <li class="nav__menu-item"><a class="nav__menu-link" href="#">Услуги</a></li>
-              <li class="nav__menu-item"><a class="nav__menu-link" href="#">Акселератор</a></li>
-              <li class="nav__menu-item"><a class="nav__menu-link" href="#">Новости</a></li>
+              <li class="nav__menu-item"><a class="nav__menu-link" href="#about-us">Кто мы?</a></li>
+              <li class="nav__menu-item"><a class="nav__menu-link" href="#service">Услуги</a></li>
+              <li class="nav__menu-item"><a class="nav__menu-link" href="#accelerator-it">Акселератор</a></li>
+              <li class="nav__menu-item"><a class="nav__menu-link" href="#events">Новости</a></li>
             </ul>
           </nav>
           <div class="footer__adress">

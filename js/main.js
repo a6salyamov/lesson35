@@ -44,9 +44,16 @@ $(function () {
     $(".country__content").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("country__list--active")
 
+  //========================================================================================
+
   $('.programm__accordion-title').on('click', function (e) {
     e.preventDefault()
-    $(this).toggleClass("programm__accordion-title--active")
+    if ($(this).hasClass('programm__accordion-title--active')) {
+      $(this).removeClass('programm__accordion-title--active')
+    } else {
+      $('.programm__accordion-title').removeClass('programm__accordion-title--active')
+      $(this).addClass('programm__accordion-title--active')
+    }
   })
 
   $('.about-us__slider').slick({
@@ -62,6 +69,7 @@ $(function () {
           breakpoint: 1250,
           settings: {
             slidesToShow: 4,
+            variableWidth: true,
           },
         },
         {
@@ -69,6 +77,7 @@ $(function () {
           settings: {
             slidesToShow: 3,
             centerMode: true,
+            variableWidth: true,
           }
         },
         {
@@ -76,22 +85,17 @@ $(function () {
           settings: {
             slidesToShow: 3,
             centerMode: true,
+            variableWidth: true,
           }
         },
         {
           breakpoint: 750,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             centerMode: true,
+            variableWidth: true,
           }
         },
-        {
-          breakpoint: 540,
-          settings: {
-            slidesToShow: 1,
-            centerMode: true,
-          }
-        }
       ]
   });
 
@@ -129,10 +133,19 @@ $(function () {
             nextArrow: '<button type="button" class="slick-next">Next</button>'
           }
         },
+        {
+          breakpoint: 322,
+          settings: {
+            slidesToShow: 1,
+            variableWidth: false,
+            prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+            nextArrow: '<button type="button" class="slick-next">Next</button>'
+          }
+        },
       ]
   });
 
-  $('.burger, .overlay').on('click', function (e) {
+  $('.burger, .overlay, .nav__menu-link').on('click', function (e) {
     e.preventDefault()
     $('.nav').toggleClass('nav--open')
     $('.burger').toggleClass('burger--close')
@@ -153,6 +166,21 @@ document.querySelectorAll('.programm__accordion-title').forEach((el) => {
     }
   })
 })
+
+
+const anchors = document.querySelectorAll('a[href^="#"]')
+
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault()
+    const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+    document.querySelector(goto).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
+}
 
 
 
