@@ -145,11 +145,18 @@ $(function () {
       ]
   });
 
-  $('.burger, .overlay, .nav__menu-link').on('click', function (e) {
+  $('.burger, .overlay').on('click', function (e) {
     e.preventDefault()
     $('.nav').toggleClass('nav--open')
     $('.burger').toggleClass('burger--close')
     $('.overlay').toggleClass('overlay--show')
+  })
+  
+  $('.nav__menu-link').on('click', function (e) {
+    e.preventDefault()
+    $('.nav').removeClass('nav--open')
+    $('.burger').removeClass('burger--close')
+    $('.overlay').removeClass('overlay--show')
   })
 
 })
@@ -181,6 +188,29 @@ for (let anchor of anchors) {
     })
   })
 }
+
+
+// открыть по кнопке
+$('.header__top-btn').click(function () {
+
+  $('.pop-up__container').fadeIn();
+  $('.pop-up__container').addClass('disabled');
+});
+
+// закрыть на крестик
+$('.pop-up__close').click(function () {
+  $('.pop-up__container').fadeOut();
+
+});
+
+// закрыть по клику вне окна
+$(document).mouseup(function (e) {
+  var popup = $('.pop-up__inner');
+  if (e.target != popup[0] && popup.has(e.target).length === 0) {
+    $('.pop-up__container').fadeOut();
+
+  }
+});
 
 
 
