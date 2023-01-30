@@ -1291,6 +1291,13 @@ div#choices--country-we-item-choice-1
   .experts__inner
     margin-bottom: 150px
 
+  .events__content-item
+    max-width: 392px
+    img
+      width: 100%
+      height: 156px
+      object-fit: cover
+
 //====================1200px=============================
 @media (max-width: 1200px)
   .main__title
@@ -1435,7 +1442,7 @@ div#choices--country-we-item-choice-1
   .price__item
     flex-wrap: wrap
     gap: 20px 20px
-    justify-content: start
+    justify-content: center
 
   .price__content
     max-width: 342px
@@ -1490,6 +1497,54 @@ div#choices--country-we-item-choice-1
     max-width: 728px
     margin: 0 auto 100px
     padding-top: 37px
+
+  .events__content
+    justify-content: center
+
+  .events__content-item
+    max-width: 300px
+    img
+      width: 100%
+      height: 118px
+      object-fit: cover
+
+  .contact
+    height: 843px
+
+  .contact__inner
+    flex-direction: column
+    padding: 63px 0 91px
+
+  .contact__left
+    text-align: center
+    margin: 0 auto
+    justify-content: start
+
+  .contact__title
+    margin-bottom: 25px
+    h3
+      font-size: 32px
+      margin-bottom: 25px
+    p
+      font-size: 16px
+
+  .contact__social
+    p
+      font-size: 18px
+
+  .contact__icons-box
+    justify-content: space-between
+
+  .contact__icons
+    margin: 0
+
+  .contact__form
+    max-width: 598px
+    margin: 0 auto
+
+  .contact__btn
+    font-size: 18px
+    padding: 22px 45px
 
 //====================1000px==========================
 @media ( max-width: 1000px )
@@ -1652,6 +1707,27 @@ div#choices--country-we-item-choice-1
   .partners__content-item
     height: 82px
     line-height: 82px
+    &:nth-child(6)
+      img
+        transform: scale(0.8) translate( 0px, -10px)
+
+  .events__content-item
+    max-width: 229px
+    img
+      width: 100%
+      height: 100px
+      object-fit: cover
+
+  .events__content-text
+    font-size: 12px
+    padding: 0 6px 0 10px
+    margin-top: 20px
+    margin-bottom: 35px
+    span
+      font-size: 14px
+
+  .events__content-num
+    padding: 0 0 10px 10px
 
 //=====================900px=========================
 @media (max-width: 900px)
@@ -1693,6 +1769,35 @@ div#choices--country-we-item-choice-1
 
   .experts__slider-text
     margin: 0 auto
+
+  .becom-partner__title
+    font-size: 32px
+    margin-bottom: 30px
+
+  .becom-partner__text
+    font-size: 20px
+    margin-bottom: 35px
+
+  .becom-partner__btn
+    padding: 0 75px
+
+  .footer__icon
+    font-size: 12px
+    a
+      img
+        transform: scale(0.9) translateX(-7px)
+
+  .nav__menu
+    font-size: 14px
+
+  .nav__menu-item
+    margin-right: 26px
+
+  .footer__adress
+    max-width: 167px
+    font-size: 12px
+    a
+      font-size: 14px
 
 //=====================750px=========================
 @media (max-width: 768px)
@@ -1843,6 +1948,47 @@ div#choices--country-we-item-choice-1
     line-height: 55px
     margin: 0 32px
     border-radius: 5px
+
+  .events
+    position: relative
+    height: 763px
+
+  .events__content
+    transform: rotate(-90deg)
+    flex-direction: row-reverse
+    position: absolute
+    margin: 0
+    top: 190px
+    left: 50%
+
+  .events__content-item
+    transform: translateY(-86%)
+    width: 171px
+    height: 323px
+    img
+      height: 86px
+
+  .events__content-text
+    position: relative
+    transform: rotate(90deg)
+    font-size: 10px
+    line-height: 18px
+    padding: 0
+    margin: 0
+    width: 175px
+    top: 65px
+    left: 30px
+    span
+      font-size: 12px
+      line-height: 18px
+      margin-bottom: 5px
+
+  .events__content-num
+    transform: rotate(90deg)
+    padding: 0
+    position: relative
+    top: 12px
+    left: -65px
 
 //=====================730px=========================
 
@@ -2232,7 +2378,7 @@ div#choices--country-we-item-choice-1
 
   .partners__content
     max-width: 322px
-    gap: 11px 11px
+    gap: 10px 10px
 
   .partners__content-item
     height: 53px
@@ -2250,6 +2396,103 @@ div#choices--country-we-item-choice-1
     &:nth-child(7)
       img
         transform: scale(0.5) translate(-67px, 0px)
-      
 
-        
+  .becom-partner__title
+    font-size: 24px
+    line-height: 35px
+
+  .becom-partner__text
+    font-size: 12px
+    line-height: 20px
+
+  .becom-partner__btn
+    font-size: 16px
+    line-height: 55px
+    width: 100%
+
+  .contact
+    height: 758px
+
+  .contact__inner
+    padding: 90px 0
+
+  .contact__title
+    margin-bottom: 18px
+    h3
+      font-size: 24px
+      margin-bottom: 18px
+    p
+      font-size: 14px
+      line-height: 28px
+
+  .contact__social
+    p
+      font-size: 16px
+      margin: 0
+
+  .contact__icons
+    flex-direction: column
+    text-align: center
+    margin: 0
+
+  .contact__icons-box
+    justify-content: space-evenly
+
+  .contact__icons-img
+    width: 45px
+    height: 45px
+    img
+      transform: scale(0.8) translateY(-6px)
+
+  .contact__left
+    height: auto
+
+  .contact__form
+    min-width: auto
+    width: 320px
+    padding: 0 16px 24px
+
+  .contact__btn
+    max-width: 100%
+    display: inline
+    border-radius: 5px
+    font-size: 16px
+
+  .contact__input
+    font-size: 14px
+    input
+      font-size: 14px
+
+  .choices[data-type*=select-one]::after
+    top: 18px
+    left: 0
+
+  .choices[data-type*=select-one].is-open::after
+    top: 18px
+    transform: rotate(180deg)
+
+  .choices__item.choices__item--selectable
+    position: relative
+    & img
+      position: absolute
+      top: 19px
+      left: 41px
+
+  .choices__inner
+    font-size: 14px
+    width: 87px
+
+  .choices
+    width: 92px
+
+  .footer__icon
+    font-size: 10px
+    p
+      margin-top: 10px
+
+  .footer__adress
+    font-size: 10px
+    a
+      font-size: 10px
+    p
+      margin-bottom: 10px
