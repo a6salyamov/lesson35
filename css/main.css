@@ -2547,6 +2547,9 @@ div#choices--country-we-item-choice-1 {
     text-align: center;
   }
 
+  .programm__accordion-title--active span {
+    margin-right: 0;
+  }
   .programm__accordion-title--active .programm__accordion-ellipse {
     position: absolute;
     top: 80px;
@@ -2610,7 +2613,6 @@ div#choices--country-we-item-choice-1 {
   .price__icon p {
     font-size: 16px;
     text-align: left;
-    margin-left: 14px;
   }
   .price__icon img {
     -webkit-transform: scale(0.8);
@@ -3122,7 +3124,7 @@ div#choices--country-we-item-choice-1 {
   }
 
   .blue-icons__title {
-    margin: 0 0 27px 0;
+    margin: 0 auto 27px;
     font-size: 24px;
     line-height: 40px;
     max-width: 324px;
@@ -3382,6 +3384,10 @@ div#choices--country-we-item-choice-1 {
   }
   .footer__adress p {
     margin-bottom: 10px;
+  }
+
+  .price__icon img {
+    padding: 0;
   }
 }
 @media (max-width: 355px) {
